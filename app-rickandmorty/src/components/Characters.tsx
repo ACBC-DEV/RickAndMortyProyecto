@@ -39,10 +39,11 @@ export default function Characters() {
       <ul className="grid container grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
         <Each Render={CardCharacter} data={Characters} />
       </ul>
-      <Pagination>
+      <Pagination className="my-5">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
+              className=" rounded-3xl"
               onClick={prevPage}
               href={`${pathname}?page=${
                 page === 1 ? pagination.pages : page - 1
@@ -50,13 +51,13 @@ export default function Characters() {
             />
           </PaginationItem>
           <PaginationItem>
-            <PaginationLink href="#">{page}</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
+            <PaginationLink className="rounded-3xl" href="#">
+              {page}
+            </PaginationLink>
           </PaginationItem>
           <PaginationItem>
             <PaginationNext
+              className=" rounded-3xl"
               onClick={nextPage}
               href={`${pathname}?page=${
                 pagination.pages === page ? 1 : page + 1
