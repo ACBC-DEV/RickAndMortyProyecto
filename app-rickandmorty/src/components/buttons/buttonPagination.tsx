@@ -11,7 +11,11 @@ export default function ButtonPagination({
   href,
 }: ButtonPaginationProps) {
   return (
-    <Button variant="default" asChild className=" m-2">
+    <Button
+      variant="ghost"
+      asChild
+      className="m-2 w-40  border-2 border-white rounded-3xl"
+    >
       <Link href={`/characters/${href}`}>{children}</Link>
     </Button>
   );

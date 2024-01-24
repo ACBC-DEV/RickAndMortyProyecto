@@ -8,9 +8,9 @@ export default function ButtonBack() {
 
   return (
     <Button
-      variant="default"
+      variant="outline"
       onClick={() => router.push(`/characters?page=${page}`)}
-      className="w-20 h-10  m-2"
+      className="w-20 h-10 m-2 rounded-3xl bg- border-2 border-white"
     >
       Back
     </Button>

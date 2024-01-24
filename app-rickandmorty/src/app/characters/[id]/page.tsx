@@ -20,7 +20,7 @@ export default async function CharacterID({
     <section className="h-screen grid place-content-center">
       <ButtonBack />
       <Character {...data} />
-      <div className="grid grid-cols-3 gap-x-4 mx-3 place-content-center items-center">
+      <div className="flex  gap-x-4 mx-3 place-content-center items-center">
         {id === 1 ? (
           ""
         ) : (

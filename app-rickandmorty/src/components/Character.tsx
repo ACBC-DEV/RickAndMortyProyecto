@@ -12,10 +12,10 @@ export default function Character({
 }: TCharacters) {
   return (
     <>
-      <section className="bg-zinc-700 rounded-3xl p-4 m-2 shadow-2xl gap-2 ">
+      <section className="bg-opacity-30 rounded-[50px] p-4 m-2 shadow-2xl border-4 border-white gap-2  ">
         <div className="flex justify-evenly items-center">
           <Image
-            className="rounded-full w-52 md:w-96 p-2 md:rounded-3xl"
+            className="rounded-full w-52 md:w-96 p-2 "
             width={128}
             height={128}
             src={image}
@@ -33,7 +33,7 @@ export default function Character({
               >
                 {status}
               </p>
-              -<p className="text-lg md:text-2xl">{gender}</p>
+              <p className="text-lg md:text-2xl">{gender}</p>
             </div>
             <h4 className="text-center text-lg md:text-2xl">{species}</h4>
           </div>
