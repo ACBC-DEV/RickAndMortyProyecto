@@ -5,6 +5,13 @@ export type TCharacters = {
   status: string;
   gender: string;
   species: string;
+  //origen ? string  ; location ? string ,species ? string
+  origin: {
+    name: string;
+  };
+  location: {
+    name: string;
+  };
 };
 export type IInfo = {
   pages: number;

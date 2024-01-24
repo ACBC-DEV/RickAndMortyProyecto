@@ -1,49 +1,52 @@
-"use client";
-import { Suspense, useEffect } from "react";
-import type { TCharacters, IInfo } from "../types/Tcharacters";
-import Each from "./Each";
-import CardCharacter from "./CardCharacter";
-import useStore from "@/store/useStore";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
-
-export default function Characters() {
-  const { Characters, getCharacters, url, setUrl, pagination } = useStore();
-  useEffect(() => {
-    getCharacters(url);
-  }, [getCharacters, url]);
+import type { TCharacters } from "@/types/Tcharacters";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+export default function Character({
+  image,
+  name,
+  status,
+  gender,
+  location,
+  origin,
+  species,
+}: TCharacters) {
   return (
-    <section className="grid place-content-center">
-      <h2>Characters</h2>
-      <ul className="grid container grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        <Each Render={CardCharacter} data={Characters} />
-      </ul>
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              onClick={() => setUrl(pagination.prev)}
-              href=""
-            />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">{pagination.pages}</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext onClick={() => setUrl(pagination.next)} href="#" />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
-    </section>
+    <>
+      <section className="bg-zinc-700 rounded-3xl p-4 m-2 shadow-2xl gap-2 ">
+        <div className="flex justify-evenly items-center">
+          <Image
+            className="rounded-full w-52 md:w-96 p-2 md:rounded-3xl"
+            width={128}
+            height={128}
+            src={image}
+            alt={name}
+          />
+          <div className="p-2 grid place-content-center">
+            <h3 className="mx-auto text-2xl md:text-5xl lg:text-7xl">{name}</h3>
+            <div className="flex gap-x-3 ">
+              <p
+                className={cn("text-lg md:text-2xl", {
+                  "text-atlantis-400": status === "Alive",
+                  "text-yellow-500": status === "unknown",
+                  "text-red-500": status === "Dead",
+                })}
+              >
+                {status}
+              </p>
+              -<p className="text-lg md:text-2xl">{gender}</p>
+            </div>
+            <h4 className="text-center text-lg md:text-2xl">{species}</h4>
+          </div>
+        </div>
+        <div className="w-full  flex items-center justify-center gap-x-2  mb-5 text-lg md:text-2xl">
+          <p className="text-center ">{origin.name}</p>-
+          <p className="text-center">{location.name}</p>
+        </div>
+        <p className="w-fit text-xl">
+          Descripcion Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ipsum aliquam obcaecati cupiditate ut impedit recusandae, consectetur,
+        </p>
+      </section>
+    </>
   );
 }

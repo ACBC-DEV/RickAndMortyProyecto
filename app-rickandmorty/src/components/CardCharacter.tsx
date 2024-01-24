@@ -1,10 +1,14 @@
 "use client";
+import Link from "next/link";
 import { TCharacters } from "../types/Tcharacters";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 function CardCharacter(character: TCharacters) {
   return (
-    <li className="bg-zinc-700 rounded-3xl p-4 m-1 shadow-2xl gap-x-1">
+    <Link
+      href={`/characters/${character.id}`}
+      className=" bg-zinc-700 rounded-3xl p-2 shadow-2xl "
+    >
       <div className="flex justify-evenly items-center">
         <Image
           className="rounded-full w-32 md:w-44 p-2"
@@ -14,8 +18,8 @@ function CardCharacter(character: TCharacters) {
           alt={character.name}
         />
         <div className="p-2">
-          <h3>{character.name}</h3>
-          <div className="flex gap-x-3">
+          <h3 className="text-xl">{character.name}</h3>
+          <div className="flex flex-col  md:flex-row md:gap-x-3">
             <p
               className={cn("rounded-3xl", {
                 "text-atlantis-400": character.status === "Alive",
@@ -25,7 +29,7 @@ function CardCharacter(character: TCharacters) {
             >
               {character.status}
             </p>
-            <p>-</p>
+
             <p>{character.gender}</p>
           </div>
         </div>
@@ -34,7 +38,7 @@ function CardCharacter(character: TCharacters) {
         Descripcion Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Ipsum aliquam obcaecati cupiditate ut impedit recusandae, consectetur,
       </p>
-    </li>
+    </Link>
   );
 }
 

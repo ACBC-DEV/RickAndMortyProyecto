@@ -1,4 +1,4 @@
-import Characters from "@components/Character";
+import Characters from "@/components/Characters";
 export default function CharactersHome() {
   return <Characters />;
 }

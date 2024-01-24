@@ -4,12 +4,12 @@ export default function Each({
   data,
 }: {
   Render: React.ElementType;
-  data: TCharacters[];
+  data: [] | TCharacters[];
 }) {
   return (
     <>
       {data?.map((i: TCharacters) => (
-        <Render key={i.id} {...i} />
+        <Render key={i} {...i} />
       ))}
     </>
   );

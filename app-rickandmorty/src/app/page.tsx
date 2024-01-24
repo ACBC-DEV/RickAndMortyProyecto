@@ -1,10 +1,9 @@
-import Link from "next/link";
+import NavBar from "@/components/NavBar";
 
 export default async function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <Link href="/characters">Characters</Link>
+      <NavBar />
     </div>
   );
 }
