@@ -7,11 +7,11 @@ function CardCharacter(character: TCharacters) {
   return (
     <Link
       href={`/characters/${character.id}`}
-      className=" bg-zinc-700 rounded-3xl p-2 shadow-2xl "
+      className="bg-[#333] border-2 border-white rounded-3xl p-2 shadow-2xl duration-300  hover:shadow-3xl hover:scale-110"
     >
       <div className="flex justify-evenly items-center">
         <Image
-          className="rounded-full w-32 md:w-44 p-2"
+          className="rounded-full w-32 md:w-44 m-2 border-white border-2 hover:scale-110 duration-300"
           width={128}
           height={128}
           src={character.image}
