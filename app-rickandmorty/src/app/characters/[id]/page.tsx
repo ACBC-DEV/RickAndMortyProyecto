@@ -1,4 +1,5 @@
 import Character from "@/components/Character";
+import CharacterGrid from "@/components/CharacterGrid";
 import ButtonBack from "@/components/buttons/ButtonBack";
 
 import ButtonPagination from "@/components/buttons/buttonPagination";
@@ -17,7 +18,7 @@ export default async function CharacterID({
   const id = Number(params.id);
 
   return (
-    <section className="h-screen grid place-content-center">
+    <section className=" grid place-content-center">
       <ButtonBack />
       <Character {...data} />
       <div className="flex  gap-x-4 mx-3 place-content-center items-center">
@@ -29,6 +30,7 @@ export default async function CharacterID({
         <p className="text-center ">{id}</p>
         <ButtonPagination href={`${id + 1}`}>next</ButtonPagination>
       </div>
+      <CharacterGrid />
     </section>
   );
 }

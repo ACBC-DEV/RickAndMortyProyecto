@@ -1,19 +1,10 @@
 "use client";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import Each from "./Each";
 import CardCharacter from "./CardCharacter";
 import useStore from "@/store/useStore";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
-
+import PaginationComponent from "./buttons/PaginationComponent";
 import { useSearchParams, usePathname } from "next/navigation";
 
 export default function Characters() {
@@ -37,35 +28,17 @@ export default function Characters() {
     <section className="grid place-content-center">
       <NavBar />
       <ul className="grid container grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-        <Each Render={CardCharacter} data={Characters} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Each Render={CardCharacter} data={Characters} />
+        </Suspense>
       </ul>
-      <Pagination className="my-5">
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious
-              className=" rounded-3xl"
-              onClick={prevPage}
-              href={`${pathname}?page=${
-                page === 1 ? pagination.pages : page - 1
-              }`}
-            />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink className="rounded-3xl" href="#">
-              {page}
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext
-              className=" rounded-3xl"
-              onClick={nextPage}
-              href={`${pathname}?page=${
-                pagination.pages === page ? 1 : page + 1
-              }`}
-            />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
+      <PaginationComponent
+        page={page}
+        pagination={pagination}
+        prevPage={prevPage}
+        nextPage={nextPage}
+        pathname={pathname}
+      />
     </section>
   );
 }

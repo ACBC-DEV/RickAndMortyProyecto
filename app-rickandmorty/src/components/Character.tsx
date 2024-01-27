@@ -12,7 +12,7 @@ export default function Character({
 }: TCharacters) {
   return (
     <>
-      <section className="bg-mine-shaft-600 rounded-[50px] p-4 m-2 shadow-2xl border-4 border-white gap-2  ">
+      <section className="bg-mine-shaft-800 rounded-[50px] p-4 py-6 m-2 shadow-2xl border-4 border-white gap-2  ">
         <div className="flex justify-evenly items-center">
           <Image
             className="rounded-full w-52 md:w-96 p-2 "
