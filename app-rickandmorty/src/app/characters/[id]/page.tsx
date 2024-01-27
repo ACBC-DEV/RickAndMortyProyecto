@@ -30,6 +30,7 @@ export default async function CharacterID({
         <p className="text-center ">{id}</p>
         <ButtonPagination href={`${id + 1}`}>next</ButtonPagination>
       </div>
+
       <CharacterGrid />
     </section>
   );
