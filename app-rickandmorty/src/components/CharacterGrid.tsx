@@ -26,11 +26,11 @@ export default function CharacterGrid() {
         <Each Render={CardCharacter} data={Characters} />
       </div>
       <PaginationComponent
-        page={page}
-        pagination={pagination}
-        prevPage={prevPage}
-        nextPage={nextPage}
-        pathname={pathname}
+      // page={page}
+      // pagination={pagination}
+      // prevPage={prevPage}
+      // nextPage={nextPage}
+      // pathname={pathname}
       />
     </>
   );

@@ -1,3 +1,4 @@
+"use client";
 import {
   Pagination,
   PaginationContent,
@@ -6,22 +7,20 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import useStore from "@/store/useStore";
+import { usePathname, useSearchParams } from "next/navigation";
 
-interface PaginationComponentProps {
-  page: number;
-  pagination: { pages: number };
-  prevPage: () => void;
-  nextPage: () => void;
-  pathname: string;
-}
+const PaginationComponent = ({ page }: { page: number }) => {
+  const { pagination, setPage } = useStore();
+  const pathname = usePathname();
 
-const PaginationComponent: React.FC<PaginationComponentProps> = ({
-  page,
-  pagination,
-  prevPage,
-  nextPage,
-  pathname,
-}) => {
+  const nextPage = () => {
+    setPage(pagination.pages === page ? 1 : page + 1);
+  };
+
+  const prevPage = () => {
+    setPage(page === 1 ? pagination.pages : page - 1);
+  };
   return (
     <Pagination className="my-5">
       <PaginationContent>

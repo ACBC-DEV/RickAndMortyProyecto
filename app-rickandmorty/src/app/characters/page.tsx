@@ -1,4 +1,12 @@
+import CharacterV2 from "@/components/CharacterV2";
 import Characters from "@/components/Characters";
-export default function CharactersHome() {
-  return <Characters />;
+type CharactersHomeProps = {
+  searchParams: { page: string };
+};
+export default function CharactersHome({ searchParams }: CharactersHomeProps) {
+  // return <Characters />;
+  const { page } = searchParams;
+  console.log(+page);
+  const pageInt = parseInt(page);
+  return <CharacterV2 page={pageInt} />;
 }
