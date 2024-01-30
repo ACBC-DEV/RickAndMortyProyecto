@@ -6,7 +6,7 @@ type CharactersHomeProps = {
 export default function CharactersHome({ searchParams }: CharactersHomeProps) {
   // return <Characters />;
   const { page } = searchParams;
-  console.log(+page);
+
   const pageInt = parseInt(page);
   return <CharacterV2 page={pageInt} />;
 }
