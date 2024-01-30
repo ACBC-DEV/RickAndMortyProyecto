@@ -8,10 +8,10 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import useStore from "@/store/useStore";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
-const PaginationComponent = ({ page }: { page: number }) => {
-  const { pagination, setPage } = useStore();
+const PaginationComponent = () => {
+  const { pagination, setPage, page } = useStore();
   const pathname = usePathname();
 
   const nextPage = () => {
