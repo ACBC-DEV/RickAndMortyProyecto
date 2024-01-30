@@ -32,7 +32,7 @@ export default function NavBar() {
     <nav className="flex mx-auto justify-center items-center gap-x-2 h-16 px-4 py-2 border-4 border-white rounded-full w-80 my-4">
       {NavData.map((i) => (
         <Link
-          className="hover:border-2 hover:scale-110 border-white rounded-3xl px-2 py-1 duration-75"
+          className="hover:border-2 hover:scale-110 hover:bg-mine-shaft-900 border-white rounded-3xl px-2 py-1 duration-75"
           key={i.name}
           href={i.href}
         >
