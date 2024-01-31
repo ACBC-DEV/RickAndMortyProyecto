@@ -1,6 +1,6 @@
 import React from "react";
 import Each from "../Each";
-import CardLocation from "../cards/CardLocation";
+import CardLocation from "../Cards/CardLocation";
 
 const getLocation = async (page = 1) => {
   const rta = await fetch(

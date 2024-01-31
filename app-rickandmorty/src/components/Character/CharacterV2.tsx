@@ -1,4 +1,4 @@
-import CardCharacter from "../cards/CardCharacter";
+import CardCharacter from "../Cards/CardCharacter";
 import Each from "../Each";
 import NavBar from "../NavBar";
 import PaginationComponent from "../buttons/PaginationComponent";

@@ -1,6 +1,6 @@
 "use client";
 import useStore from "@/store/useStore";
-import CardCharacter from "../cards/CardCharacter";
+import CardCharacter from "../Cards/CardCharacter";
 import Each from "../Each";
 import PaginationComponent from "../buttons/PaginationComponent";
 import { useEffect } from "react";
