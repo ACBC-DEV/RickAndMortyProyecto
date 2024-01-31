@@ -1,4 +1,4 @@
-import type { TCharacters, IInfo } from "../types/Tcharacters";
+import type { TCharacters, IInfo } from "../types/TCharacters";
 export async function getCharacter(
   url = "https://rickandmortyapi.com/api/character"
 ) {

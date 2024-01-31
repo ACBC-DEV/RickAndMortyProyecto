@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { TCharacters, IInfo } from "../types/Tcharacters";
+import type { TCharacters, IInfo } from "../types/TCharacters";
 
 type Tstore = {
   Characters: TCharacters[];
