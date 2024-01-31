@@ -36,4 +36,3 @@ export default function CardEpisode(props: TEpisode) {
     </article>
   );
 }
-//"S05E10", como puedo extaer el numero de la temporada y el numero del episodio de ese string?
