@@ -1,5 +1,4 @@
-import Character from "@/components/Character";
-import CharacterGrid from "@/components/CharacterGrid";
+import { CharacterGrid, Character } from "@components/Character";
 import ButtonBack from "@/components/buttons/ButtonBack";
 
 import ButtonPagination from "@/components/buttons/buttonPagination";

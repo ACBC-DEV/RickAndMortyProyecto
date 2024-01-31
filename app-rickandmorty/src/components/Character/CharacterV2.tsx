@@ -1,7 +1,7 @@
-import CardCharacter from "./cards/CardCharacter";
-import Each from "./Each";
-import NavBar from "./NavBar";
-import PaginationComponent from "./buttons/PaginationComponent";
+import CardCharacter from "../cards/CardCharacter";
+import Each from "../Each";
+import NavBar from "../NavBar";
+import PaginationComponent from "../buttons/PaginationComponent";
 
 async function getCharacters(page = 1) {
   const rta = await fetch(
