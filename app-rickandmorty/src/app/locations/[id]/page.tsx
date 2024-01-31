@@ -1,6 +1,4 @@
-import Location from "@/components/Location";
-import LocationGrid from "@/components/LocationGrid";
-
+import { LocationGrid, Location } from "@components/Location";
 const getLocation = async (id: string) => {
   const rta = await fetch(`https://rickandmortyapi.com/api/location/${id}`);
   const data = await rta.json();

@@ -1,6 +1,4 @@
-import Character from "./Character";
-import CharacterGrid from "./CharacterGrid";
-import Characters from "./Characters";
-import CharacterV2 from "./CharacterV2";
-
-export { Character, CharacterGrid, Characters, CharacterV2 };
+export { default as Character } from "./Character";
+export { default as CharacterGrid } from "./CharacterGrid";
+export { default as Characters } from "./Characters";
+export { default as CharacterV2 } from "./CharacterV2";

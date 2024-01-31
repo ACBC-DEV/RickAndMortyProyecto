@@ -1,5 +1,4 @@
-import CharacterV2 from "@/components/CharacterV2";
-import Characters from "@/components/Characters";
+import { CharacterV2 } from "@components/Character";
 type CharactersHomeProps = {
   searchParams: { page: string };
 };

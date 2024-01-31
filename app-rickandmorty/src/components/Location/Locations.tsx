@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "../NavBar";
 import LocationGrid from "./LocationGrid";
 
 export default function Locations() {
