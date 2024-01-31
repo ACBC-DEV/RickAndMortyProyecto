@@ -1,3 +1,5 @@
+import { Episodes } from "@/components/Episode";
+
 export default function pageEpisodes() {
-  return <div>page</div>;
+  return <Episodes />;
 }

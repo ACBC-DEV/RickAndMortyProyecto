@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { TCharacters } from "../../types/Tcharacters";
+import { TCharacters } from "../../types/TCharacters";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 function CardCharacter(character: TCharacters) {
