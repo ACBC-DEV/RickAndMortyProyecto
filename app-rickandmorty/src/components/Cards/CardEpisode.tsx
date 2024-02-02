@@ -24,15 +24,15 @@ export default function CardEpisode(props: TEpisode) {
     episode = result.episode;
   }
   return (
-    <article className="box grid place-content-center w-fit">
-      <div className="flex gap-2">
-        <h2 className="text-5xl">{props.name}</h2>
+    <article className="box duration-200 hover:scale-110 hover:bg-mine-shaft-900 hover:shadow-sm hover:shadow-white">
+      <div className="flex flex-col md:flex-row gap-2 justify-evenly items-center">
+        <h2 className="text-4xl text-center">{props.name}</h2>
         <div>
-          <p>season: {season}</p>
-          <p>episode: {episode}</p>
+          <p>{season} season</p>
+          <p>{episode} episode</p>
         </div>
       </div>
-      <p>Date: {props.air_date}</p>
+      <p className="text-center">{props.air_date}</p>
     </article>
   );
 }
