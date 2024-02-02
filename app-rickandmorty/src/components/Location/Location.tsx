@@ -1,4 +1,4 @@
-import type { TLocations } from "@/types/Tlocations";
+import type { TLocations } from "@/types/";
 import ButtonBack from "../buttons/ButtonBack";
 
 export default function Location(props: TLocations) {

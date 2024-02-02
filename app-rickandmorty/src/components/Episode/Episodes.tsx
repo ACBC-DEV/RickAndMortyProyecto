@@ -1,11 +1,9 @@
 import { EpisodesList } from ".";
-import NavBar from "../NavBar";
 
 export default function Episodes() {
   return (
     <>
-      <NavBar />
-      <h2 className="text-4xl text-center">Episodes</h2>
+      <h2 className="text-8xl text-center m-14 mb-32">Episodes</h2>
       <EpisodesList />;
     </>
   );
