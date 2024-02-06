@@ -29,10 +29,10 @@ export default function NavBar() {
   }
 
   return (
-    <nav className="flex mx-auto justify-center items-center gap-x-2 h-16 px-4 py-2 border-4 border-white rounded-full w-fit my-4">
+    <nav className="flex mx-auto justify-center items-center gap-x-1 h-16 px-4 py-2 border-4 border-white rounded-full w-fit my-4">
       {NavData.map((i) => (
         <Link
-          className="hover:border-2 hover:scale-110 hover:bg-mine-shaft-900 border-white rounded-3xl px-2 py-1 duration-75"
+          className="outline-2 outline-white hover:outline hover:scale-110 hover:bg-mine-shaft-900 rounded-3xl px-2 py-1 duration-75"
           key={i.name}
           href={i.href}
         >
