@@ -1,8 +1,13 @@
 export default async function Home() {
   return (
     <>
-      <h1 className="text-center text-4xl font-bold my-28">Rick And Morty</h1>
-      <section className="mt-8 mx-4 md:mx-12 lg:mx-24 xl:mx-48 2xl:mx-96 border-4 border-white rounded-3xl p-">
+      <header className="bg-white h-96">
+        <h1 className="text-center text-4xl text-black font-bold my-28 md:text-9xl">
+          Rick And Morty
+        </h1>
+      </header>
+
+      <section className="mt-8 mx-4 md:mx-12 lg:mx-24 xl:mx-48 2xl:mx-96 border-4 border-white rounded-3xl p-10">
         <h2 className="text-4xl">Descripcion</h2>
         <p className="text-2xl text-gray-400">
           Interactive Rick and Morty web project offering an in-depth
