@@ -1,17 +1,12 @@
 import { Episode, EpisodesList } from "@components/Episode";
-const getEpisode = async (id: string) => {
-  const response = await fetch(`https://rickandmortyapi.com/api/episode/${id}`);
-  const data = await response.json();
-  return data;
-};
-
+import { getEpisode } from "@/lib/fetch";
 export default async function pageId({ params }: { params: { id: string } }) {
-  const data = await getEpisode(params.id);
+	const data = await getEpisode(parseInt(params.id));
 
-  return (
-    <>
-      <Episode props={data} />
-      <EpisodesList />
-    </>
-  );
+	return (
+		<>
+			<Episode props={data} />
+			<EpisodesList />
+		</>
+	);
 }

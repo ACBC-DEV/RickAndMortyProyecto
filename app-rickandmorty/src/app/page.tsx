@@ -1,11 +1,6 @@
 import CardCharacter from "@/components/Cards/CardCharacter";
 import Each from "@/components/Each";
-import Image from "next/image";
-const getCharters = async (id = 1) => {
-	const rta = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
-	const data = await rta.json();
-	return data;
-};
+import { getCharacter } from "@lib/fetch";
 
 export default async function Home() {
 	function generateRandomNumber() {
@@ -14,7 +9,7 @@ export default async function Home() {
 	const randomCharters = [];
 	for (let i = 0; i < 6; i++) {
 		const random = generateRandomNumber();
-		const data = await getCharters(random);
+		const data = await getCharacter(random);
 		randomCharters.push(data);
 	}
 
