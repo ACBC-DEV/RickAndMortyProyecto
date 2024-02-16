@@ -1,11 +1,10 @@
-import { CharacterV2 } from "@components/Character";
+import { Characters } from "@components/Character";
 type CharactersHomeProps = {
-  searchParams: { page: string };
+	searchParams: { page: string };
 };
 export default function CharactersHome({ searchParams }: CharactersHomeProps) {
-  // return <Characters />;
-  const { page } = searchParams;
+	const { page } = searchParams;
 
-  const pageInt = parseInt(page);
-  return <CharacterV2 page={pageInt} />;
+	const pageInt = parseInt(page);
+	return <Characters page={pageInt} />;
 }
