@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-// Supports weights 100-900
-import "@fontsource-variable/noto-sans-devanagari";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
+const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "Rick and Morty",
 	description:
@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="bg-mine-shaft-950 text-white selection:text-atlantis-400 selection:bg-mine-shaft-700">
+			<body
+				className={`${inter.className} bg-mine-shaft-950 text-white selection:text-atlantis-400 selection:bg-mine-shaft-700`}
+			>
 				<NavBar />
 				{children}
 			</body>
