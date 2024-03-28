@@ -1,4 +1,5 @@
-const API = process.env.URL;
+const API = "https://rickandmortyapi.com/api";
+
 export const endPoints = {
   character: {
     getCharaters: (page = 1) => `${API}/character/?page=${page}`,
