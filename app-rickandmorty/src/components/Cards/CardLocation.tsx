@@ -1,4 +1,4 @@
-import type { TLocations } from "@/types/Tlocations";
+import type { TLocations } from "@/types/";
 import Link from "next/link";
 export default function CardLocation({
   name,

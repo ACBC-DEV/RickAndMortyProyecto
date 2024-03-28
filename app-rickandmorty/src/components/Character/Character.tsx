@@ -42,10 +42,10 @@ export default function Character({
           <p className="text-center ">{origin.name}</p>-
           <p className="text-center">{location.name}</p>
         </div>
-        <p className="w-fit text-xl">
+        {/* <p className="w-fit text-xl">
           Descripcion Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Ipsum aliquam obcaecati cupiditate ut impedit recusandae, consectetur,
-        </p>
+        </p> */}
       </section>
     </>
   );

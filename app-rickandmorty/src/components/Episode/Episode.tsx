@@ -21,7 +21,7 @@ export default function Episode({ props }: { props: TEpisode }) {
         <p>{props.characters.length} characters</p>
       </div>
       <p className="text-center text-xl"> {props.air_date}</p>
-      <p>descripcion IA</p>
+      {/* <p>descripcion IA</p> */}
     </section>
   );
 }
