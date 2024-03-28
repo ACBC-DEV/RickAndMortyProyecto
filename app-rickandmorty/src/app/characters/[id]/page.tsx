@@ -25,7 +25,7 @@ export default async function CharacterID({
         <ButtonPagination href={`${id + 1}`}>next</ButtonPagination>
       </div>
 
-      <CharacterGrid page={id} />
+      <CharacterGrid page={Math.floor(Math.random() * 42)} />
     </section>
   );
 }
