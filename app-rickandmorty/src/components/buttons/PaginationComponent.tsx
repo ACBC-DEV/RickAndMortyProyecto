@@ -18,16 +18,6 @@ const PaginationComponent = ({
   page: number;
   pagination: TPagination;
 }) => {
-  // const { pagination, setPage, page } = useStore();
-  // const pathname = usePathname();
-
-  // const nextPage = () => {
-  //   setPage(pagination.pages === page ? 1 : page + 1);
-  // };
-
-  // const prevPage = () => {
-  //   setPage(page === 1 ? pagination.pages : page - 1);
-  // };
   return (
     <Pagination className="my-5">
       <PaginationContent>
