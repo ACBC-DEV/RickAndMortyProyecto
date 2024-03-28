@@ -9,7 +9,7 @@ export default function Each({
   return (
     <>
       {data?.map((i: TCharacters | TLocations | TEpisode) => (
-        <Render key={i} {...i} />
+        <Render key={`${i.id}-${crypto.randomUUID()}`} {...i} />
       ))}
     </>
   );
